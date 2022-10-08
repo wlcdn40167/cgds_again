@@ -1,0 +1,1 @@
+<img src="{{ asset('/img/smu.png') }}" alt="" style="width:168px;">
