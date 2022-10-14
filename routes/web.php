@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GraduatesController;
+use App\Http\Controllers\StudentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,3 +28,4 @@ Route::middleware([
     })->name('dashboard');
 });
 Route::get('list',[App\Http\Controllers\GraduatesController::class,'show']);
+Route::get('list2',[App\Http\Controllers\StudentController::class,'show']);

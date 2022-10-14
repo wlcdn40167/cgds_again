@@ -40,11 +40,8 @@
                         <a class="nav-link" aria-current="page" href="{{ url('/dashboard') }}">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="{{ url('/list') }}">Graduates</a>
+                        <a class="nav-link active" href="{{ url('/list') }}">Candidates for Graduation</a>
                     </li>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Deficiencies</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Admin Panel</a>
@@ -66,59 +63,64 @@
             </div>
         </div>
     </nav>
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
-    <div class="graduatesTable container">
-        <div class="row">
-            <div class="col-5">
-                <p class="fs-3">List of Graduates</p>
-            </div>
-            <div class="col-7 row d-flex align-items-center">
-                <div class="col-2">
-                    <label for=""><b>School: </b></label>
-                </div>
-                <div class="col-5">
-                    <div class="d-flex">
-                        <select class="form-select col-2" aria-label="Default select example">
-                            <option selected>View School</option>
-                            <option value="1">SEAIT</option>
-                            <option value="2">SHaNS</option>
-                            <option value="3">SAB</option>
-                            <option value="4">STEH</option>
-                            <option value="5">SGS</option>
-                            <option value="5">CoL</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-5">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </div>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <title>CGDS | Dashboard</title>
 
-            </div>
-        </div>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
-        <table class="table table-bordered">
-            <thead class="table-dark">
-    <tr>
-    <td><span>studentID</span></td>
-        <td><span>firstName</span></td>
-        <td><span>lastName</span></td>
-        <td><span>Address</span></td>
-        <td><span>course</span></td>
-    </tr>
-    </thead>
-            <tbody>
-    <tr>
-      
-        
-        </tr>
-        
-            </tbody>
-        </table>
+    <!-- Styles [Bootstrap] -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!-- CSS only -->
+    <style>
+        .img-fluid {
+            width: 80px;
+            height: 80px;
+        }
+   
+   
+        .img-cr-fluid{
+            width:600px;
+            height:350px;
+           
+        }
+        </style> 
+    <body class="antialiased">
+
+    <!-- Bootstrap JS -->
+    <script src="https://www.markuptag.com/bootstrap/5/js/bootstrap.bundle.min.js"></script>
+    <br> <br> <br> 
+   <div class="container text-center">
+
+  <div class="row align-items-center">
+    <div class="col">
+    <script src="https://www.markuptag.com/bootstrap/5/js/bootstrap.bundle.min.js"></script>
+    <br> <br> <br> 
+    <img src="https://www.cta.org/wp-content/uploads/2020/03/empty-classroom.jpg" class="img-cr-fluid img-thumbnail  ms-1 p-3"  alt="">
+
     </div>
+    <div class="col">
+    <p class="text-center fw-bold">REGISTAR'S OFFICE <br> CANDIDATES FOR GRADUATION <br> DISSEMINATION SYSTEM </p>
+    <p class="text-center">This is an web application that will allow<br> you to view your academic and non- academic <br>
+    requirements to be an subjective graduating student</p>
+    <h3 class="text-center fw-bold"> SUBMIT YOUR REQUIREMENTS NOW</h3>
+    <br>
+    <div class="d-grid gap-2 col-2 mx-auto">
+    <button type="button" class="btn btn-primary ">CONTACT US</button>
+    </div>
+    </div>
+    </div>
+  
+  </div>
+
+</div>
 
     <!-- Bootstrap JS -->
     <script src="https://www.markuptag.com/bootstrap/5/js/bootstrap.bundle.min.js"></script>

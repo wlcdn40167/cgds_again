@@ -40,14 +40,13 @@
                         <a class="nav-link" aria-current="page" href="{{ url('/dashboard') }}">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="{{ url('/list') }}">Graduates</a>
-                    </li>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Deficiencies</a>
+                        <a class="nav-link active" href="{{ url('/list') }}">Candidates for Graduation</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Admin Panel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/studentview') }}">Student View</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -59,7 +58,13 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item text-danger" href="{{ route('logout') }}">Logout</a></li>
+                            <form method="POST" action="{{ route('logout') }}" x-data>
+
+                    <x-jet-responsive-nav-link href="{{ route('logout') }}"
+                                   @click.prevent="$root.submit();">
+                        {{ __('Log Out') }}
+                    </x-jet-responsive-nav-link>
+                </form>
                         </ul>
                     </li>
                 </ul>
@@ -70,28 +75,13 @@
     <div class="graduatesTable container">
         <div class="row">
             <div class="col-5">
-                <p class="fs-3">List of Graduates</p>
+                <p class="fs-3">Candidates for Graduation</p>
             </div>
             <div class="col-7 row d-flex align-items-center">
-                <div class="col-2">
-                    <label for=""><b>School: </b></label>
-                </div>
+                
                 <div class="col-5">
-                    <div class="d-flex">
-                        <select class="form-select col-2" aria-label="Default select example">
-                            <option selected>View School</option>
-                            <option value="1">SEAIT</option>
-                            <option value="2">SHaNS</option>
-                            <option value="3">SAB</option>
-                            <option value="4">STEH</option>
-                            <option value="5">SGS</option>
-                            <option value="5">CoL</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-5">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <form class="d-flex" role="search" type="get">
+                        <input class="form-control me-2" name="query" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                 </div>
@@ -103,11 +93,11 @@
         <table class="table table-bordered">
             <thead class="table-dark">
     <tr>
-    <td><span>studentID</span></td>
-        <td><span>firstName</span></td>
-        <td><span>lastName</span></td>
+    <td><span>Student ID</span></td>
+        <td><span>First Name</span></td>
+        <td><span>Last Name</span></td>
         <td><span>Address</span></td>
-        <td><span>course</span></td>
+        <td><span>Course</span></td>
     </tr>
     </thead>
             <tbody>
@@ -123,6 +113,12 @@
         @endforeach 
             </tbody>
         </table>
+    </div>
+    
+    <div class="container text-center">
+    <button type="button" class="btn btn-primary ">Add</button>
+    <button type="button" class="btn btn-primary ">Edit</button>
+    <button type="button" class="btn btn-primary ">Delete</button>
     </div>
 
     <!-- Bootstrap JS -->
