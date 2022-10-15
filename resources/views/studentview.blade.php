@@ -23,13 +23,17 @@
         .graduatesTable {
             margin-top: 75px;
         }
+        body {
+        background-image: url('Ainsley.jpg');
+        }
     </style>
+    
 </head>
 
 <body class="antialiased">
     <nav class="navbar navbar-expand-lg bg-info">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><b>
+            <a class="navbar-brand" href="{{ url('/dashboard') }}"><b>
                     <img src="https://upload.wikimedia.org/wikipedia/en/4/44/Saint_Mary%27s_University_logo.png" class="img-fluid me-3 p-1" alt="" srcset=""> SMU | CGDS</b></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -37,19 +41,12 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
+                        <a class="nav-link" aria-current="page"  href="{{ url('/dashboard') }}">Dashboard</a>
+                    </li>
+                    <li class="nav-right">
                         <a class="nav-link" aria-current="page" href="{{ url('/login') }}">Login as admin</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="{{ url('/list') }}">Graduates</a>
-                    </li>
-                    </li>
-                            <li><a class="dropdown-item" href="{{ route('profile.show') }}">Profile</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item text-danger" href="{{ route('logout') }}">Logout</a></li>
-                        </ul>
-                    </li>
+                    
                 </ul>
             </div>
         </div>
@@ -57,18 +54,20 @@
 
     <div class="graduatesTable container">
         <div class="row">
-            <div class="col-5">
-                <p class="fs-3">List of Graduates</p>
-            </div>
-          
+            <div class="col-7 row d-flex align-items-center">
+                
+                <div class="col-5">
+                    <form class="d-flex" role="search" type="get">
+                        <input class="form-control me-2" name="query" type="search" placeholder="ID Number" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
 
 
             </div>
         </div>
 
-        
-    </div>
-
+    
     <!-- Bootstrap JS -->
     <script src="https://www.markuptag.com/bootstrap/5/js/bootstrap.bundle.min.js"></script>
 </body>
