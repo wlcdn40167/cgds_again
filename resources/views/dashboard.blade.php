@@ -23,6 +23,9 @@
         .graduatesTable {
             margin-top: 75px;
         }
+        body {
+            background-image: url('/img/2.png');
+        }
     </style>
 </head>
 

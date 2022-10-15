@@ -23,6 +23,9 @@
         .graduatesTable {
             margin-top: 75px;
         }
+        body {
+            background-image: url('/img/2.png');
+        }
     </style>
 </head>
 
@@ -92,9 +95,9 @@
         <table class="table table-bordered">
             <thead class="table-dark">
     <tr>
-    <td><span>Student ID</span></td>
-        <td><span>First Name</span></td>
-        <td><span>Last Name</span></td>
+    <td>
+        <span>Student ID</span></td>
+        <td><span>Full Name</span></td>
         <td><span>Address</span></td>
         <td><span>Course</span></td>
     </tr>
@@ -103,8 +106,7 @@
     <tr>
         @foreach($student as $stu)
         <td><span>{{$stu['studentID']}}</span></td>
-        <td><span>{{$stu['firstName']}}</span></td>
-        <td><span>{{$stu['lastName']}}</span></td>
+        <td><span>{{$stu['lastName']}}, {{$stu['firstName']}} {{$stu['middleName']}}.</span></td>
         <td><span>{{$stu['address']}}</span></td>
         <td><span>{{$stu['course']}}</span></td>
         

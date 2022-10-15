@@ -19,12 +19,12 @@
             width: 80px;
             height: 80px;
         }
-
-        .graduatesTable {
-            margin-top: 75px;
+        form { 
+            margin: 0 auto; 
+            width:250px;
         }
         body {
-        background-image: url('Ainsley.jpg');
+            background-image: url('/img/2.png');
         }
     </style>
     
@@ -51,22 +51,14 @@
             </div>
         </div>
     </nav>
-
-    <div class="graduatesTable container">
-        <div class="row">
-            <div class="col-7 row d-flex align-items-center">
-                
-                <div class="col-5">
-                    <form class="d-flex" role="search" type="get">
-                        <input class="form-control me-2" name="query" type="search" placeholder="ID Number" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </div>
-
-
-            </div>
-        </div>
-
+<br>
+    <form action="/action_page.php">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname" maxlength="25" size="25"><br><br>
+  <label for="pin">PIN:</label>
+  <input type="text" id="pin" name="pin" maxlength="25" size="25"><br><br>
+  <input type="submit" value="Submit">
+</form>
     
     <!-- Bootstrap JS -->
     <script src="https://www.markuptag.com/bootstrap/5/js/bootstrap.bundle.min.js"></script>
