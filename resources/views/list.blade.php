@@ -45,9 +45,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Admin Panel</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/studentview') }}">Student View</a>
-                    </li>
+                    
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         {{ Auth::user()->name }}
@@ -59,6 +57,7 @@
                                 <hr class="dropdown-divider">
                             </li>
                             <form method="POST" action="{{ route('logout') }}" x-data>
+                            @csrf
 
                     <x-jet-responsive-nav-link href="{{ route('logout') }}"
                                    @click.prevent="$root.submit();">

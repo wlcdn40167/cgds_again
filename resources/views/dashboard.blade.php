@@ -29,7 +29,7 @@
 <body class="antialiased">
     <nav class="navbar navbar-expand-lg bg-info">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><b>
+            <a class="navbar-brand" href="{{ url('/dashboard') }}"><b>
                     <img src="https://upload.wikimedia.org/wikipedia/en/4/44/Saint_Mary%27s_University_logo.png" class="img-fluid me-3 p-1" alt="" srcset=""> SMU | CGDS</b></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -113,7 +113,7 @@
     <h3 class="text-center fw-bold"> SUBMIT YOUR REQUIREMENTS NOW</h3>
     <br>
     <div class="d-grid gap-2 col-2 mx-auto">
-    <button type="button" class="btn btn-primary ">CONTACT US</button>
+    <button type="button" class="btn btn-primary " href="{{ route('logout') }}">CONTACT US</button>
     </div>
     </div>
     </div>

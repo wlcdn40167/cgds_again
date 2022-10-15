@@ -15,8 +15,13 @@ use App\Http\Controllers\StudentController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('studentview');
 });
+Route::get('/studentview', function () {
+    return view('studentview');
+});
+
+
 
 Route::middleware([
     'auth:sanctum',
